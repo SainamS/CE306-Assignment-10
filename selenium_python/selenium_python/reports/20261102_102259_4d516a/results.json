@@ -1,0 +1,35 @@
+{
+  "created": "2026-11-02T10:23:04.805751+07:00",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "selenium": "4.51.0",
+  "browser": "chrome",
+  "browser_version": "156.0.8078.74",
+  "counts": {
+    "EXPECTED_FAIL": 1,
+    "PASS": 1
+  },
+  "results": [
+    {
+      "lab": 3,
+      "case": "immediate_lookup",
+      "expected": "",
+      "actual": "",
+      "status": "EXPECTED_FAIL",
+      "detail": "EarlyLookupFailure: The course-ready element is not in the DOM yet (NoSuchElementException).",
+      "trace": "01_immediate_lookup_trace.txt",
+      "seconds": 0.089,
+      "screenshot": "01_immediate_lookup.png"
+    },
+    {
+      "lab": 3,
+      "case": "explicit_wait",
+      "expected": "COURSE_READY",
+      "actual": "COURSE_READY",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 3.191,
+      "screenshot": "02_explicit_wait.png"
+    }
+  ]
+}

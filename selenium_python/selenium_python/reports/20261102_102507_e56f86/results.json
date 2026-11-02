@@ -1,0 +1,23 @@
+{
+  "created": "2026-11-02T10:25:08.782894+07:00",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "selenium": "4.51.0",
+  "browser": "chrome",
+  "browser_version": "156.0.8078.74",
+  "counts": {
+    "TODO": 1
+  },
+  "results": [
+    {
+      "lab": 6,
+      "case": "correct_name_on_same_form",
+      "expected": "",
+      "actual": "",
+      "status": "TODO",
+      "detail": "ยังไม่ได้ทำ Lab 6: เติมโค้ดใน lab6() แล้วรันเมนู 6 อีกครั้ง",
+      "seconds": 0.049,
+      "screenshot": "01_correct_name_on_same_form.png"
+    }
+  ]
+}

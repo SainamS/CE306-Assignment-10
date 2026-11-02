@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CE Course Registration</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef3f8;color:#18304b;font:18px/1.5 system-ui,sans-serif}main{max-width:920px;margin:30px auto;padding:28px;background:white;border-radius:18px;box-shadow:0 8px 30px #1231}header{border-bottom:3px solid #228b88;margin-bottom:18px}h1{font-size:30px;margin:0}h2{font-size:22px}label{display:block;margin:12px 0 5px}input:not([type=checkbox]),select{display:block;padding:10px;width:100%;border:1px solid #899cb0;border-radius:5px;font:inherit}button{padding:12px 20px;background:#165ec5;border:0;border-radius:6px;color:white;font:inherit;cursor:pointer}section{margin:20px 0;padding:20px;background:#f4f7fc;border-radius:9px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}#result{padding:12px;background:#e8edf5;margin-top:14px;font-weight:700;min-height:55px}small{color:#475e73}code{background:#e5edf5;padding:2px 6px}#version{font-weight:700;color:#176f6d}@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
+<main>
+<header><small>Computer Engineering / Selenium Python</small><h1 id="heading">CE Course Registration</h1><p>Application version: <span id="version"></span></p></header>
+<p id="rule">Business rule: credits must be an integer from 1 to 3.</p>
+<div class="grid"><section><h2>Registration form</h2>
+<form id="registration" novalidate>
+<label for="student-name">Student name</label><input id="student-name" name="student_name" autocomplete="off">
+<label for="course">Course</label><select id="course" name="course"><option value="selenium">Selenium Python</option><option value="testing">Software Testing</option></select>
+<label for="credits">Credits (1-3)</label><input id="credits" name="credits" type="number" value="3">
+<label><input id="consent" type="checkbox"> I confirm my registration</label>
+<button id="submit" data-testid="register" type="submit">Register</button>
+</form><div id="result" role="status" data-code="READY">READY</div>
+<p><small>Simulation only. There is no database and no real registration.</small></p></section>
+<section><h2>Delayed content</h2><p>The course information appears after 3 seconds.</p><button id="load-course" type="button">Load course information</button><div id="loading-area" aria-live="polite"></div><h2>Observation</h2><p>Selenium drives this browser: find elements, type, select, click, and check the displayed result.</p></section></div>
+</main>
+<script>
+const requested = new URLSearchParams(location.search).get('version');
+const version = ['buggy','fixed','refactored'].includes(requested) ? requested : 'fixed';
+document.querySelector('#version').textContent = version;
+const result = document.querySelector('#result');
+const validCreditCount = value => Number.isInteger(value) && value >= 1 && value <= 3;
+function displayResult(code, detail='') {
+  result.dataset.code = code;
+  result.textContent = detail ? `${code}: ${detail}` : code;
+  result.style.background = code === 'REGISTERED' ? '#d9f2e7' : '#fff0d4';
+}
+document.querySelector('#registration').addEventListener('submit', event => {
+  event.preventDefault();
+  const name = document.querySelector('#student-name').value.trim();
+  const credits = Number(document.querySelector('#credits').value);
+  const consent = document.querySelector('#consent').checked;
+  if (!name) return displayResult('NAME_REQUIRED');
+  if (!consent) return displayResult('CONSENT_REQUIRED');
+  // Three prepared versions let students observe red / green / refactor.
+  let valid;
+  if (version === 'buggy') valid = Number.isInteger(credits) && credits >= 1 && credits <= 4;
+  else if (version === 'fixed') valid = Number.isInteger(credits) && credits >= 1 && credits <= 3;
+  else valid = validCreditCount(credits);
+  if (!valid) return displayResult('CREDITS_OUT_OF_RANGE');
+  const course = document.querySelector('#course').selectedOptions[0].textContent;
+  displayResult('REGISTERED', `${name} / ${course} / ${credits} credits`);
+});
+document.querySelector('#load-course').addEventListener('click', () => {
+  const area = document.querySelector('#loading-area');
+  area.textContent = 'Loading...';
+  document.querySelector('#load-course').disabled = true;
+  setTimeout(() => {
+    const content = document.createElement('p');
+    content.id = 'course-ready';
+    content.textContent = 'COURSE_READY';
+    area.replaceChildren(content);
+  }, 3000);
+});
+</script>
+</html>

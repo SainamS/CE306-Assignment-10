@@ -1,0 +1,63 @@
+{
+  "created": "2026-11-02T10:20:43.965668+07:00",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "selenium": "4.51.0",
+  "browser": "chrome",
+  "browser_version": "156.0.8078.74",
+  "counts": {
+    "PASS": 5
+  },
+  "results": [
+    {
+      "lab": 1,
+      "case": "page_title",
+      "expected": "CE Course Registration",
+      "actual": "CE Course Registration",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 0.162,
+      "screenshot": "01_page_title.png"
+    },
+    {
+      "lab": 1,
+      "case": "by_id",
+      "expected": "input",
+      "actual": "input",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 0.063,
+      "screenshot": "02_by_id.png"
+    },
+    {
+      "lab": 1,
+      "case": "by_name",
+      "expected": "input",
+      "actual": "input",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 0.05,
+      "screenshot": "03_by_name.png"
+    },
+    {
+      "lab": 1,
+      "case": "by_css",
+      "expected": "button",
+      "actual": "button",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 0.059,
+      "screenshot": "04_by_css.png"
+    },
+    {
+      "lab": 1,
+      "case": "by_xpath",
+      "expected": "h1",
+      "actual": "h1",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 0.05,
+      "screenshot": "05_by_xpath.png"
+    }
+  ]
+}

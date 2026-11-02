@@ -1,0 +1,45 @@
+{
+  "created": "2026-11-02T10:24:06.361677+07:00",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "selenium": "4.51.0",
+  "browser": "chrome",
+  "browser_version": "156.0.8078.74",
+  "counts": {
+    "EXPECTED_FAIL": 1,
+    "PASS": 2
+  },
+  "results": [
+    {
+      "lab": 4,
+      "case": "credits_4_buggy",
+      "expected": "CREDITS_OUT_OF_RANGE",
+      "actual": "REGISTERED",
+      "status": "EXPECTED_FAIL",
+      "detail": "ComparisonFailure: expected='CREDITS_OUT_OF_RANGE'; actual='REGISTERED'",
+      "trace": "01_credits_4_buggy_trace.txt",
+      "seconds": 1.249,
+      "screenshot": "01_credits_4_buggy.png"
+    },
+    {
+      "lab": 4,
+      "case": "credits_4_fixed",
+      "expected": "CREDITS_OUT_OF_RANGE",
+      "actual": "CREDITS_OUT_OF_RANGE",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.235,
+      "screenshot": "02_credits_4_fixed.png"
+    },
+    {
+      "lab": 4,
+      "case": "credits_4_refactored",
+      "expected": "CREDITS_OUT_OF_RANGE",
+      "actual": "CREDITS_OUT_OF_RANGE",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.289,
+      "screenshot": "03_credits_4_refactored.png"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\Users\STUDENT\Downloads\selenium_python\selenium_python\run_labs.py", line 100, in case
+    details = fn() or {}
+              ~~^^
+  File "C:\Users\STUDENT\Downloads\selenium_python\selenium_python\run_labs.py", line 206, in reject_four
+    return compare('CREDITS_OUT_OF_RANGE', self.submit(credits=4, version=version))
+  File "C:\Users\STUDENT\Downloads\selenium_python\selenium_python\run_labs.py", line 62, in compare
+    raise ComparisonFailure(expected, actual)
+ComparisonFailure: expected='CREDITS_OUT_OF_RANGE'; actual='REGISTERED'

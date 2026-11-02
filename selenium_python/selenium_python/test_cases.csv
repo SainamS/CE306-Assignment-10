@@ -1,0 +1,6 @@
+case_id,credits,expected
+boundary_0,0,CREDITS_OUT_OF_RANGE
+minimum_1,1,REGISTERED
+middle_2,2,REGISTERED
+maximum_3,3,REGISTERED
+boundary_4,4,CREDITS_OUT_OF_RANGE

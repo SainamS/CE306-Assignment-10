@@ -1,0 +1,63 @@
+{
+  "created": "2026-11-02T10:24:33.923263+07:00",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "selenium": "4.51.0",
+  "browser": "chrome",
+  "browser_version": "156.0.8078.74",
+  "counts": {
+    "PASS": 5
+  },
+  "results": [
+    {
+      "lab": 5,
+      "case": "boundary_0",
+      "expected": "CREDITS_OUT_OF_RANGE",
+      "actual": "CREDITS_OUT_OF_RANGE",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.258,
+      "screenshot": "01_boundary_0.png"
+    },
+    {
+      "lab": 5,
+      "case": "minimum_1",
+      "expected": "REGISTERED",
+      "actual": "REGISTERED",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.302,
+      "screenshot": "02_minimum_1.png"
+    },
+    {
+      "lab": 5,
+      "case": "middle_2",
+      "expected": "REGISTERED",
+      "actual": "REGISTERED",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.255,
+      "screenshot": "03_middle_2.png"
+    },
+    {
+      "lab": 5,
+      "case": "maximum_3",
+      "expected": "REGISTERED",
+      "actual": "REGISTERED",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.279,
+      "screenshot": "04_maximum_3.png"
+    },
+    {
+      "lab": 5,
+      "case": "boundary_4",
+      "expected": "CREDITS_OUT_OF_RANGE",
+      "actual": "CREDITS_OUT_OF_RANGE",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.31,
+      "screenshot": "05_boundary_4.png"
+    }
+  ]
+}

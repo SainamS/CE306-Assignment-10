@@ -1,0 +1,43 @@
+{
+  "created": "2026-11-02T10:23:36.228552+07:00",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "selenium": "4.51.0",
+  "browser": "chrome",
+  "browser_version": "156.0.8078.74",
+  "counts": {
+    "PASS": 3
+  },
+  "results": [
+    {
+      "lab": 2,
+      "case": "valid_form",
+      "expected": "REGISTERED",
+      "actual": "REGISTERED",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.27,
+      "screenshot": "01_valid_form.png"
+    },
+    {
+      "lab": 2,
+      "case": "blank_name",
+      "expected": "NAME_REQUIRED",
+      "actual": "NAME_REQUIRED",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.264,
+      "screenshot": "02_blank_name.png"
+    },
+    {
+      "lab": 2,
+      "case": "missing_consent",
+      "expected": "CONSENT_REQUIRED",
+      "actual": "CONSENT_REQUIRED",
+      "status": "PASS",
+      "detail": "Observed behavior matches the test.",
+      "seconds": 1.238,
+      "screenshot": "03_missing_consent.png"
+    }
+  ]
+}
